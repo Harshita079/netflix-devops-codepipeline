@@ -15,5 +15,5 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "EC2 key pair name"
-  default     = "your-key-name"   # ⚠️ change this
+  default     = "netflix-key"   # ⚠️ change this
 }
