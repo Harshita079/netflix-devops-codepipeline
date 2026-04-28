@@ -4,7 +4,8 @@ provider "aws" {
 
 # 🔐 Security Group
 resource "aws_security_group" "web_sg" {
-  name        = "web_sg"
+  name_prefix = "web_sg_"   # ✅ FIXED
+
   description = "Allow web traffic"
 
   ingress {
@@ -35,7 +36,7 @@ resource "aws_security_group" "web_sg" {
 resource "aws_instance" "app_server" {
   ami           = var.ami_id
   instance_type = var.instance_type
-  key_name      = var.key_name
+  key_name      = var.key_name   # make sure this = netflix-key
 
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
