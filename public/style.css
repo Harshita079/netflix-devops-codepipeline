@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: #111;
+    font-family: Arial;
+    color: white;
+  }
+  
+  header {
+    background: black;
+    padding: 15px;
+  }
+  
+  header h1 {
+    color: red;
+  }
+  
+  .banner {
+    height: 300px;
+    background: url('https://wallpapercave.com/wp/wp4056410.jpg') center/cover;
+    padding: 50px;
+  }
+  
+  .row {
+    margin: 20px;
+  }
+  
+  .movies {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+  
+  .movies img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .movies img:hover {
+    transform: scale(1.1);
+  }
